@@ -1,0 +1,12 @@
+<div class="card flex items-center bg-white border border-gray-300 rounded-lg shadow-md p-6 max-w-xl mx-auto my-4 text-center">
+  
+    <!-- Content Section on the Left -->
+    <div class="flex-1">
+        <h4 class="text-xl font-semibold text-gray-900">{{ menu.restaurantName }}</h4>
+        <span>
+            <p class="text-gray-700 mt-2">{{ menu.itemName }}</p> 
+            <p class="text-gray-700 mt-2"> Quantity :  {{menu.itemQuantity}}</p>
+        </span>
+      <p class="text-gray-700 mt-2">${{ menu.itemPrice * menu.itemQuantity }}</p>
+    </div>
+</div>

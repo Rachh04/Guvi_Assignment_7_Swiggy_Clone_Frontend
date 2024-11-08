@@ -1,0 +1,22 @@
+
+
+<div class="mx-12 my-8">
+    <h2 class="text-2xl text-center"> Your Favourite Restaurants</h2>
+    <div class="flex gap-8 flex-wrap justify-center mx-12 p-2 mt-4">
+      <h3 *ngIf="favouriteRestaurants.length===0" class="text-center" >No Available Restaurants</h3>
+      <app-restaurant-card *ngFor="let restaurant of favouriteRestaurants"  [restaurant] = "restaurant">
+      </app-restaurant-card>
+    </div>
+  </div>
+
+
+  <div class="mx-12">
+    <h2 class="text-2xl text-center">Your Favourite food options</h2>
+    <div class="flex gap-8 flex-wrap justify-center mx-12 p-2 mt-4">
+      <h3 *ngIf="favouriteFoodItems.length===0" class="text-center" >No Such Food Options Available</h3>
+      <app-menu-item
+        *ngFor="let foodItem of favouriteFoodItems"
+        [food] = foodItem>
+      </app-menu-item>
+    </div>
+  </div>

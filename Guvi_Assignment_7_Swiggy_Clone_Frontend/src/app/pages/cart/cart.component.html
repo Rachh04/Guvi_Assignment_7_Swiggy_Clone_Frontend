@@ -1,0 +1,12 @@
+<div *ngFor="let item of currentCart">
+    <app-cart-items [menu] = "item" ></app-cart-items>
+
+
+</div>
+<div class="card flex items-center bg-white border border-gray-300 rounded-lg shadow-md p-6 max-w-xl mx-auto my-4 ">
+    <div class="flex-1 text-center">
+    
+    <h4 >Total Bill: ${{sum}}</h4> 
+    </div>
+    <button class="checkout-button" (click)="checkOut()"> CheckOut</button>
+</div>

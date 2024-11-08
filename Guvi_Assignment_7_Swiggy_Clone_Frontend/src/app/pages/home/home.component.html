@@ -1,0 +1,33 @@
+<div class="mb-8">
+
+  <div class="m-4 search-container">
+    <input type="text" placeholder="Search for restaurants and food" [(ngModel)]="inputText" (ngModelChange)="filteredFoodItems()">
+    <button (click)="searchBtn()">
+      🔍 <!-- Unicode character for search icon -->
+    </button>
+  </div>  
+
+
+  <div class="mx-12">
+    <h2 class="text-2xl text-center">Featured Restaurants</h2>
+    <div class="flex gap-8 flex-wrap justify-center mx-12 p-2 mt-4">
+      <h3 *ngIf="filteredRestaurants.length===0" class="text-center" >No Available Restaurants</h3>
+      <app-restaurant-card *ngFor="let restaurant of filteredRestaurants"  [restaurant] = "restaurant">
+      </app-restaurant-card>
+    </div>
+  </div>
+
+
+  <div class="mx-12">
+    <h2 class="text-2xl text-center">Order our best food options</h2>
+    <div class="flex gap-8 flex-wrap justify-evenly mx-12 p-2 mt-4">
+      <h3 *ngIf="filteredFoodItem.length===0" class="text-center" >No Such Food Options Available</h3>
+      <app-menu-item
+        *ngFor="let foodItem of filteredFoodItem"
+          [food] = "foodItem"
+        >
+      </app-menu-item>
+    </div>
+  </div>
+
+</div>

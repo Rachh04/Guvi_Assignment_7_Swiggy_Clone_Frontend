@@ -1,0 +1,10 @@
+.card {
+    min-width: 250px;
+    box-shadow: 5px 5px 5px 0 rgba(119, 105, 105, 0.3);
+    border-radius: 12%;
+    transition: box-shadow 0.3s ease; /* Smooth transition effect */
+}
+
+.card:hover {
+    box-shadow: 8px 8px 15px 0 rgba(119, 105, 105, 0.5); /* Increased shadow on hover */
+}
